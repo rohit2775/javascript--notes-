@@ -34,3 +34,15 @@
 // } else {
 //     console.log("Not an alphabet");
 // }
+
+// loops in javascript 
+
+// 1 for loop
+// basic syntax 
+
+for (let i  = 0; i  < 10 ; i ++) {
+    const element = array[i ];
+
+}
+
+// mostly used for arrays and its operations 
