@@ -74,3 +74,8 @@
 //     console.log('hello rohit ');
 //     b-=3
 // } while (b>=1);
+
+
+// higher order array functions 
+
+// foreach 
