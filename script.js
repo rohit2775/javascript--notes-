@@ -204,3 +204,35 @@ console.log(key);
  arr1.forEach(printarray) // function ks refrence dena hai naki usko execute krna hai 
  
 // foreach ek aaisa array method hai jo ki array ke elements , index , aur har ek element pura ka pura element rakhne ka takat rakhta hai 
+
+arr1.forEach((item, index , arr)=>{
+    console.log(item, index, arr);
+})
+//output will be
+//  rohit 0 [ 'rohit', 'rahul', 'raj', 'rounak' ]
+//rahul 1 [ 'rohit', 'rahul', 'raj', 'rounak' ]
+//raj 2 [ 'rohit', 'rahul', 'raj', 'rounak' ]
+//rounak 3 [ 'rohit', 'rahul', 'raj', 'rounak' ]
+
+array1 =[
+    {
+        name:"rohit",
+        age :23
+    },
+    {
+        name:"rohan",
+        age :22
+    },
+    {
+        name:"riya",
+        age :13
+    }
+]
+
+array1.forEach((item)=>{
+    console.log(item.name);
+})
+
+
+// forEach maximum time backend me use hoga aur databanse me data above like format me rahega , iss tarah se access kr sakte hai 
+ 
