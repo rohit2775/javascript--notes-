@@ -90,7 +90,7 @@ for (const elem of myarray) {
 let name = "ROHIT"
 
 for (const elem of name) {
-    console.log(elem);
+    // console.log(elem);
  // string ke objects ko ek ek krke acces kiya jaa sakta hai 
  //output will be
  // R
@@ -133,9 +133,35 @@ var myobj ={
      class : 3
 }
 
-for (const [key ,value] of myobj) {
-      console.log(key , ':-', value);
+// for (const [key ,value] of myobj) {
+    //   console.log(key , ':-', value);
 
-}
+
+// }
 
 // output TypeError: myobj is not iterable
+
+
+//pr  for in loop objects prr kaam krta hai 
+
+//example :-
+
+// var myobj = {
+//     name : "rohit ",
+//     class : 3,
+//     age : 34,
+//     isloggedin : "yes "
+// }
+
+// for (const key in myobj) {
+//    console.log( `${key}  is ${myobj[key]}`);
+//     }  
+// ?? kya ye arrays pr bhi kaam karega ??
+
+// lets check 
+
+let arr =["js", "swift", "php","python "]
+
+for (const key in arr) {
+   console.log(key);
+}
