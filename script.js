@@ -78,4 +78,64 @@
 
 // higher order array functions 
 
-// foreach 
+// for... of
+let myarray =["rohit","rahul","rishav","gyan","google","facebook "]
+
+for (const elem of myarray) {
+    // console.log(elem)
+
+    
+}
+
+let name = "ROHIT"
+
+for (const elem of name) {
+    console.log(elem);
+ // string ke objects ko ek ek krke acces kiya jaa sakta hai 
+ //output will be
+ // R
+ //O
+ //H
+ //I
+ ///T 
+
+}
+
+//map
+
+// var map = new Map()
+ 
+// map.set('IN','INDIA')
+// map.set('RS','RUSSIA')
+// map.set('BR','BRITAIN')
+
+// // console.log(map);
+
+// for (const key of map) {
+//     console.log(key); //it wil give the output in  array format 
+
+   
+// }
+
+//  // to change or to destructure the output
+
+//  for (const [key , value] of map) {
+      
+//      console.log(key , ':-', value);
+//  }
+
+
+// for of objects pr kaam nai krta hai 
+
+var myobj ={
+     name:"rohit",
+     age : 20,
+     class : 3
+}
+
+for (const [key ,value] of myobj) {
+      console.log(key , ':-', value);
+
+}
+
+// output TypeError: myobj is not iterable
