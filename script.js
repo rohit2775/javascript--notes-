@@ -198,7 +198,7 @@ console.log(key);
  // can also  run it by giving refrence 
  
  function printarray (elem){
-    console.log(elem);
+    // console.log(elem);
  }
 
  arr1.forEach(printarray) // function ks refrence dena hai naki usko execute krna hai 
@@ -206,7 +206,7 @@ console.log(key);
 // foreach ek aaisa array method hai jo ki array ke elements , index , aur har ek element pura ka pura element rakhne ka takat rakhta hai 
 
 arr1.forEach((item, index , arr)=>{
-    console.log(item, index, arr);
+    // console.log(item, index, arr);
 })
 //output will be
 //  rohit 0 [ 'rohit', 'rahul', 'raj', 'rounak' ]
@@ -230,9 +230,37 @@ array1 =[
 ]
 
 array1.forEach((item)=>{
-    console.log(item.name);
+    // console.log(item.name);
 })
 
 
 // forEach maximum time backend me use hoga aur databanse me data above like format me rahega , iss tarah se access kr sakte hai 
  
+
+// aray methods  array.map() 
+//example 
+
+let array2 = [20,30,40,50,60,70,80]
+
+const answer = array2
+                     .map((num)=> num*10)
+                     .map((num)=> num *20)
+// map me naya array return hua hai jo ki dono hi multiplication ke baad ka result hai 
+
+
+// console.log(answer);
+//    [4000,  6000,
+//    8000, 10000,
+//   12000, 14000,
+//   16000
+// ]
+
+
+// array  methods 2... array.reduce 
+
+const arr3= [1,2,3,4,5,6,7]
+
+ const ans2=arr3.reduce(function(acc, currvalue){
+    return acc+currvalue 
+},0)                                   // here 0 is the value for accumulator , initialization 
+console.log(ans2);
