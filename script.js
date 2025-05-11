@@ -163,5 +163,24 @@ var myobj ={
 let arr =["js", "swift", "php","python "]
 
 for (const key in arr) {
-   console.log(key);
+   console.log(`${key} : ${arr[key]}`);
+
 }
+
+// yes arrays pr for in loop kaam karta hai 
+
+// ?? kya map pr for in loop kaam karta hai ??
+
+// lets check 
+
+var map = new Map()
+ 
+ map.set('IN','INDIA')
+ map.set('RS','RUSSIA')
+ map.set('BR','BRITAIN')
+
+ for (const key in map) {
+  
+console.log(key);
+    }
+ 
