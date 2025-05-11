@@ -163,7 +163,7 @@ var myobj ={
 let arr =["js", "swift", "php","python "]
 
 for (const key in arr) {
-   console.log(`${key} : ${arr[key]}`);
+//    console.log(`${key} : ${arr[key]}`);
 
 }
 
@@ -183,4 +183,24 @@ var map = new Map()
   
 console.log(key);
     }
+ // so, no errors, nothing in the console it means it is not iterable 
+
+
+ // array methods 
+
+ let arr1 = ["rohit","rahul","raj","rounak"]
+
+//  arr1.forEach( function arr (elem){
+//     console.log(elem);
+
+//  })
+
+ // can also  run it by giving refrence 
  
+ function printarray (elem){
+    console.log(elem);
+ }
+
+ arr1.forEach(printarray) // function ks refrence dena hai naki usko execute krna hai 
+ 
+// foreach ek aaisa array method hai jo ki array ke elements , index , aur har ek element pura ka pura element rakhne ka takat rakhta hai 
