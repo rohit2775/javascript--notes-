@@ -273,4 +273,5 @@ console.log(ans2);
 // currentValue = abhi ka number ya element jis par kaam ho raha hai.
 
 
-// starting js DOM    
+// starting js DOM in new files 
+   
