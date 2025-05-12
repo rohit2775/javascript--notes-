@@ -261,6 +261,16 @@ const answer = array2
 const arr3= [1,2,3,4,5,6,7]
 
  const ans2=arr3.reduce(function(acc, currvalue){
+    // console.log(`the accumulator is ${acc} and currentvalue is ${currvalue}`); // logic samajhne ke liye
     return acc+currvalue 
 },0)                                   // here 0 is the value for accumulator , initialization 
 console.log(ans2);
+
+
+// terms related to array.reduce() method 
+
+// accumulator = woh box ya jagah jisme result banta jaa raha hai.
+// currentValue = abhi ka number ya element jis par kaam ho raha hai.
+
+
+// starting js DOM    
