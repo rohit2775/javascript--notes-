@@ -264,7 +264,7 @@ const arr3= [1,2,3,4,5,6,7]
     // console.log(`the accumulator is ${acc} and currentvalue is ${currvalue}`); // logic samajhne ke liye
     return acc+currvalue 
 },0)                                   // here 0 is the value for accumulator , initialization 
-console.log(ans2);
+// console.log(ans2);
 
 
 // terms related to array.reduce() method 
