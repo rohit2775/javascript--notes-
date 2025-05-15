@@ -3,21 +3,34 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="style.css">
+    <!-- <link rel="stylesheet" href="style.css"> -->
+    <title>learning DOM </title>
+        <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+
 </head>
-<body>
-    
-    <ul>
-        <li>arrays</li>
-        <li>methods </li>
-        <li>strings </li>
-        <li>loops</li>
-    </ul>
-    
-    
+<body class="bg-black">
+   <div class="bg-black "   id="main">
 
+  
+    <div id="parent" class="text-red-200">
 
-    <script src="script.js"></script>
+<div class="day">monday</div>
+<div class="day">tuesday</div>
+<div class="day">wednesday</div>
+<div class="day">thursday</div>
+    </div>
+
+      
+   
+  
+    
 </body>
+
+<script>
+
+  const parent = document.querySelector("#parent")
+ console.log(parent)
+ console.log(parent.children[1]);
+
+</script>
 </html>
