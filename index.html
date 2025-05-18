@@ -8,13 +8,31 @@
         <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
 
 </head>
-<body class="bg-black text-red-200">
+<!-- <body class="bg-black text-red-200">
 
    
        <ul class="language">
         <li>javascript</li>
 
-       </ul>
+       </ul> -->
+
+       <h2> Collection of Photos </h2>
+
+<ul id="ul">
+
+
+<li> <img id="mouse" src="https://images.unsplash.com/photo-1425082661705-1834bfd09dca?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8bW91c2V8ZW58MHx8MHx8fDA%3D" alt=""></li>
+
+<li> <img id="man"  src="https://images.unsplash.com/photo-1564564321837-a57b7070ac4f?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Nnx8bWFufGVufDB8fDB8fHww" alt=""></li>
+
+<li> <img id="peacock" src="https://images.unsplash.com/photo-1575805774658-fdb9eeda71cc?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8N3x8cGVhY29ja3xlbnwwfHwwfHx8MA%3D%3D" alt=""></li>
+
+<li> <img id="lion" src="https://images.unsplash.com/photo-1543682704-15adeb008ac4?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTl8fGxpb258ZW58MHx8MHx8fDA%3D" alt=""></li> 
+
+
+</ul>
+
+
   
     
 </body>
@@ -34,41 +52,59 @@
 
 //another way 
 
-function addLangAn(language){
-    const li = document.createElement("li");
+// function addLangAn(language){
+//     const li = document.createElement("li");
     
-    li.appendChild(document.createTextNode(language))
- document.querySelector(".language").appendChild(li)
-}
+//     li.appendChild(document.createTextNode(language))
+//  document.querySelector(".language").appendChild(li)
+// }
 
-addLangAn("python")
-addLangAn("go lang")
-addLangAn("rust")
-
-
-//editing and replacing 
-const newlang = document.querySelector("li:nth-child(2)")
-
-const newli = document.createElement("li")
-newli.textContent= "java"
-
-newlang.replaceWith(newli)
-
-//editing part 2 (outer html)
+// addLangAn("python")
+// addLangAn("go lang")
+// addLangAn("rust")
 
 
-const firstchild = document.querySelector("li:first-child")
+// //editing and replacing 
+// const newlang = document.querySelector("li:nth-child(2)")
 
-firstchild.outerHTML= "<li>typescript</li>"
+// const newli = document.createElement("li")
+// newli.textContent= "java"
 
-//remove in javascript 
+// newlang.replaceWith(newli)
 
-const lastlang = document.querySelector("li:last-child")
-lastlang.remove()
+// // //editing part 2 (outer html)
+
+
+// const firstchild = document.querySelector("li:first-child")
+
+// firstchild.outerHTML= "<li>typescript</li>"
+
+// //remove in javascript 
+
+// const lastlang = document.querySelector("li:last-child")
+// lastlang.remove()
  
 
 
 
+
+// document.getElementById("mouse").onclick = function (){
+//     alert('mouse clicked')
+// }
+
+const  mouse =  document.getElementById("mouse")
+
+mouse.addEventListener("click",function(e){
+    console.log("mouse clicked")
+    
+})
+const ul = document.getElementById("ul")
+ul.addEventListener("click",function(){
+    console.log("the ul clicked ")
+})
+
+
+// bubbling , capturing  in javascript
 
 
 </script>
