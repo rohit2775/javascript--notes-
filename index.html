@@ -8,13 +8,30 @@
         <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
 
 </head>
-<!-- <body class="bg-black text-red-200">
+<style>
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 
-   
-       <ul class="language">
-        <li>javascript</li>
+html, body {
+  height: 100%;
+  width: 100%;
+  background-color: black;
+  color: white;
+}
+ img{
+    height:  140px;
+    width: 150px;
+    margin-left: 30px;
+    margin-top: 20px;
+    
+}
 
-       </ul> -->
+</style>>
+<body>
+    
 
        <h2> Collection of Photos </h2>
 
@@ -92,20 +109,29 @@
 //     alert('mouse clicked')
 // }
 
-const  mouse =  document.getElementById("mouse")
+// const  mouse =  document.getElementById("mouse")
 
-mouse.addEventListener("click",function(e){
-    console.log("mouse clicked")
+// mouse.addEventListener("click",function(e){
+//     console.log("mouse clicked")
+//     e.stopPropagation()  //̥ ye  bubbling se rokta hai  
     
-})
+// })
 const ul = document.getElementById("ul")
-ul.addEventListener("click",function(){
-    console.log("the ul clicked ")
-})
+// ul.addEventListener("click",function(){
+//     console.log("the ul clicked ")
+// })
 
 
-// bubbling , capturing  in javascript
+// bubbling , capturing  in javascript  // easy hai just go through chat gpt ,samajh me aajayga 
 
+
+ul.addEventListener("click",function(e){
+    // console.log(e.target)    to target the element 
+  let removeit=  console.log(e.target.parentNode)   //to get the parent of the targeted thing  
+    removeit.remove()
+
+
+},false)
 
 </script>
 </html>
