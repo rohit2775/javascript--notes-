@@ -123,7 +123,9 @@ const ul = document.getElementById("ul")
 
 
 // bubbling , capturing  in javascript  // easy hai just go through chat gpt ,samajh me aajayga 
-
+//  bubbling ka matlab hai niche se uper jana , jasise ki yaha prr mouse aur ul dono me eventlistener laga hua hai , agar mouse prr click hua to pehle mouse wala eventlistener kaam karega fir uske uper wala (uska parent ul) ka eventlistener kaam karega 
+//  capturing uska ulta hai 
+// event bubbling ko rokne ke liye stop propagation ka use krte hai 
 
 ul.addEventListener("click",function(e){
     // console.log(e.target)    to target the element 
