@@ -127,13 +127,26 @@ const ul = document.getElementById("ul")
 //  capturing uska ulta hai 
 // event bubbling ko rokne ke liye stop propagation ka use krte hai 
 
-ul.addEventListener("click",function(e){
-    // console.log(e.target)    to target the element 
-  let removeit=  console.log(e.target.parentNode)   //to get the parent of the targeted thing  
-    removeit.remove()
+// ul.addEventListener("click",function(e){
+//     // console.log(e.target)    to target the element 
+//   let removeit=  console.log(e.target.parentNode)   //to get the parent of the targeted thing  
+//     removeit.remove()
 
 
-},false)
+// },false)
+
+// starting async javascript 
+
+// in synchronoos javascript we learned that the code it is single threaded and each operation waits for the last one to complete before executing 
+// means 
+// console.log(1) pehle ye code chalega fir hi dusra wala chalega 
+// console.log(2)
+// console.log(3)
+// console.log(4)
+
+
+
+
 
 </script>
 </html>
