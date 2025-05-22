@@ -79,7 +79,10 @@
    //  const root = ReactDOM.createRoot(document.getElementById("root")) 
    //   root.render(parent) // . render use - uss selected div me kuch bhi hoga usko replace krega passed arguments se 
 
+    // what is npm ??
+    // will learn in our react notes /  / for react notes just go through my repository named- react-notes
     
+     
 
 
   
