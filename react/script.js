@@ -58,8 +58,9 @@
     
     
     const root = ReactDOM.createRoot(document.getElementById("root")) 
+     root.render(parent) // . render use - uss selected div me kuch bhi hoga usko replace krega passed arguments se 
+     
     
-    const rohit = React.createElement("div" ,{ id :""} , "")
 
 //     <div>
 //   Hello Rohit bhai!
@@ -70,4 +71,4 @@
   
 
 
-       root.render(parent)
+      
