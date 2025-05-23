@@ -1,0 +1,23 @@
+{
+  "name": "react",
+  "version": "1.0.0",
+  "description": "learning react , i am a beginner ",
+  "main": "script.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rohit2775/javascript-and-react-.git"
+  },
+  "keywords": [],
+  "author": "rohit gorai",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/rohit2775/javascript-and-react-/issues"
+  },
+  "homepage": "https://github.com/rohit2775/javascript-and-react-#readme",
+  "devDependencies": {
+    "parcel": "^2.15.1"
+  }
+}
