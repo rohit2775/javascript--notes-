@@ -1,4 +1,7 @@
 
+  ####### all array methods ....... 
+ 
+
 1. Array Creation & Checking
 🔹 Array.isArray(value)
 
@@ -435,3 +438,273 @@ console.log(nums); // [10,30,40]
 Use: Array ko ulta kar deta hai.
 
 [1,2,3].reverse(); // [3,2,1]
+
+
+
+
+ ####### objects in js 
+
+ What is an Object?
+
+English:
+An object is a collection of key-value pairs.
+Keys are usually strings (or symbols), and values can be anything: numbers, strings, arrays, functions, or even other objects.
+Objects allow you to group related data together.
+
+let student = {
+    name: "Rohit",
+    age: 18,
+    marks: [85, 90, 95],
+    isActive: true
+};
+
+2️⃣ Accessing Properties
+
+Dot Notation
+
+console.log(student.name); // "Rohit"
+
+
+Bracket Notation (useful when key is dynamic)
+
+console.log(student["age"]); // 18
+
+let key = "marks";
+console.log(student[key]); // [85, 90, 95]
+
+3️⃣ Adding or Updating Properties
+// Add a new property
+student.gender = "Male";
+
+// Update existing property
+student.age = 19;
+
+console.log(student);
+// { name: 'Rohit', age: 19, marks: [85,90,95], isActive: true, gender: 'Male' }
+
+4️⃣ Deleting Properties
+delete student.isActive;
+console.log(student);
+// { name: 'Rohit', age: 19, marks: [85,90,95], gender: 'Male' }
+
+5️⃣ Methods in Objects
+
+English: Methods are functions inside objects. They usually operate on the object’s data using this.
+
+let student = {
+    name: "Rohit",
+    age: 18,
+    greet: function() {
+        console.log(`Hello, my name is ${this.name}`);
+    }
+};
+
+student.greet(); // "Hello, my name is Rohit"
+
+6️⃣ Built-in Object Methods
+1. Object.keys(obj) → Returns all keys
+console.log(Object.keys(student)); // ["name","age","greet"]
+
+2. Object.values(obj) → Returns all values
+console.log(Object.values(student)); // ["Rohit", 18, function greet(){}]
+
+3. Object.entries(obj) → Returns array of [key, value] pairs
+console.log(Object.entries(student));
+// [["name","Rohit"], ["age",18], ["greet", function(){}]]
+
+4. Object.assign(target, ...sources) → Copies properties from sources to target
+let obj1 = {a:1, b:2};
+let obj2 = {b:3, c:4};
+Object.assign(obj1, obj2);
+console.log(obj1); // {a:1, b:3, c:4}
+
+5. Object.freeze(obj) → Makes object immutable (cannot add/update/delete)
+Object.freeze(student);
+student.age = 20; // won't work
+student.city = "Delhi"; // won't work
+
+6. Object.seal(obj) → Allows modifying existing properties but cannot add/delete
+Object.seal(student);
+student.age = 25; // works
+student.city = "Delhi"; // doesn't work
+
+7. Object.hasOwn(obj, prop) → Checks if object has its own property (not inherited)
+console.log(Object.hasOwn(student, 'name')); // true
+console.log(Object.hasOwn(student, 'toString')); // false
+
+8. Object.getOwnPropertyNames(obj) → Returns all property names (enumerable + non-enumerable)
+console.log(Object.getOwnPropertyNames(student));
+
+7️⃣ Looping through Objects
+for (let key in student) {
+    console.log(key, student[key]);
+}
+// name Rohit
+// age 18
+// greet function()...
+
+8️⃣ Mini Example
+let student = {
+    name: "Rohit",
+    age: 18,
+    marks: [85,90],
+    greet() { console.log(`Hi, I'm ${this.name}`); }
+};
+
+// Access
+console.log(student.name);
+
+// Add / Update
+student.gender = "Male";
+student.age = 19;
+
+// Delete
+delete student.marks;
+
+// Object methods
+console.log(Object.keys(student)); // ['name','age','greet','gender']
+console.log(Object.values(student)); // ['Rohit',19,function,'Male']
+
+// Loop
+for(let key in student) {
+    console.log(key, student[key]);
+}
+
+// Method call
+student.greet(); // Hi, I'm Rohit
+
+
+
+ now  lets understand in hindi 
+
+
+ Object kya hai?
+
+Hindi:
+Object ek key-value pair ka collection hota hai.
+Keys usually strings (ya symbols) hoti hain, aur values kuch bhi ho sakti hain: numbers, strings, arrays, functions, ya dusre objects.
+Objects hume related data ko ek saath organize karne me help karte hain.
+
+let student = {
+    name: "Rohit",
+    age: 18,
+    marks: [85, 90, 95],
+    isActive: true
+};
+
+2️⃣ Object ki properties access karna
+
+Dot Notation / Dot se access
+
+console.log(student.name); // "Rohit"
+
+
+Bracket Notation / Brackets se access (jab key dynamic ho)
+
+console.log(student["age"]); // 18
+
+let key = "marks";
+console.log(student[key]); // [85, 90, 95]
+
+3️⃣ Properties add ya update karna
+// Nayi property add karna
+student.gender = "Male";
+
+// Existing property update karna
+student.age = 19;
+
+console.log(student);
+// { name: 'Rohit', age: 19, marks: [85,90,95], isActive: true, gender: 'Male' }
+
+4️⃣ Properties delete karna
+delete student.isActive;
+console.log(student);
+// { name: 'Rohit', age: 19, marks: [85,90,95], gender: 'Male' }
+
+5️⃣ Object Methods / Object me functions
+
+Hindi: Methods wo functions hote hain jo object ke andar define hote hain.
+
+Usually this ka use object ke data ko access karne ke liye hota hai.
+
+let student = {
+    name: "Rohit",
+    age: 18,
+    greet: function() {
+        console.log(`Hello, mera naam hai ${this.name}`);
+    }
+};
+
+student.greet(); // "Hello, mera naam hai Rohit"
+
+6️⃣ Built-in Object Methods / Inbuilt methods
+1️⃣ Object.keys(obj) → Sab keys ka array return karta hai
+console.log(Object.keys(student)); // ["name","age","greet"]
+
+2️⃣ Object.values(obj) → Sab values ka array return karta hai
+console.log(Object.values(student)); // ["Rohit", 18, function greet(){}]
+
+3️⃣ Object.entries(obj) → [key, value] pairs ka array return karta hai
+console.log(Object.entries(student));
+// [["name","Rohit"], ["age",18], ["greet", function(){}]]
+
+4️⃣ Object.assign(target, ...sources) → Ek ya zyada source objects ki properties target me copy karta hai
+let obj1 = {a:1, b:2};
+let obj2 = {b:3, c:4};
+Object.assign(obj1, obj2);
+console.log(obj1); // {a:1, b:3, c:4}
+
+5️⃣ Object.freeze(obj) → Object ko immutable bana deta hai (add/update/delete nahi kar sakte)
+Object.freeze(student);
+student.age = 20; // kaam nahi karega
+student.city = "Delhi"; // kaam nahi karega
+
+6️⃣ Object.seal(obj) → Existing properties modify kar sakte ho, lekin new property add/delete nahi kar sakte
+Object.seal(student);
+student.age = 25; // kaam karega
+student.city = "Delhi"; // kaam nahi karega
+
+7️⃣ Object.hasOwn(obj, prop) → Check karta hai ki property object ki apni hai ya inherited
+console.log(Object.hasOwn(student, 'name')); // true
+console.log(Object.hasOwn(student, 'toString')); // false
+
+8️⃣ Object.getOwnPropertyNames(obj) → Sab property names (enumerable + non-enumerable) ka array return karta hai
+console.log(Object.getOwnPropertyNames(student));
+
+7️⃣ Object loop / Object me loop lagana
+for (let key in student) {
+    console.log(key, student[key]);
+}
+// name Rohit
+// age 18
+// greet function()...
+
+8️⃣ Mini Example — Objects + Methods
+let student = {
+    name: "Rohit",
+    age: 18,
+    marks: [85,90],
+    greet() { console.log(`Hi, mai ${this.name} hu`); }
+};
+
+// Access
+console.log(student.name);
+
+// Add / Update
+student.gender = "Male";
+student.age = 19;
+
+// Delete
+delete student.marks;
+
+// Object methods
+console.log(Object.keys(student)); // ['name','age','greet','gender']
+console.log(Object.values(student)); // ['Rohit',19,function,'Male']
+
+// Loop
+for(let key in student) {
+    console.log(key, student[key]);
+}
+
+// Method call
+student.greet(); // Hi, mai Rohit hu
