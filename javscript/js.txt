@@ -786,12 +786,14 @@ console.log(add(2, 3)); // 5
 console.log(greet('Rohit')); // Hello, Rohit!
 
 🧠 Important Tips to Remember
-Type	Syntax	Example
-Named Export	export const name = ...	export function add() {}
-Default Export	export default ...	export default function() {}
-Named Import	import { name } from '...'	import { add } from './math.js'
-Default Import	import name from '...'	import greet from './greet.js'
-Rename Import	import { add as plus } from '...'	plus(2, 3)
+Type	           Syntax	                          Example
+Named Export	   export const name = ...	             export function add() {}
+Default Export	   export default ...	                 export default function() {}
+Named Import	   import { name } from '...'	         import { add } from './math.js'
+Default Import	   import name from '...'	             import greet from './greet.js'
+Rename Import	   import { add as plus } from '...'	  plus(2, 3)
+
+
 📦 Real-World Example
 
 Let’s say you have a utils.js file that contains some useful functions 👇
