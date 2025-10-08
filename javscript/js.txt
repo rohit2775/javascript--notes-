@@ -821,3 +821,160 @@ In simple words 👇
 
 🔸 export = send something out of a file
 🔸 import = bring something into a file
+
+
+
+
+  lets get started with the asynchronous javascript 
+
+    for andeling API's delays, and  fretching data we have to use asynchronous javascript 
+    like promises , async await etc 
+
+
+    setTimeout() and setInterval()
+    Promise (resolve, reject, then, catch)
+    async / await
+    fetch() API (for making requests)
+
+
+    setTimeout()
+
+What it does:
+setTimeout() runs a piece of code after a delay (in milliseconds) — and it runs only once.
+
+Example:
+console.log("Start");
+
+setTimeout(() => {
+  console.log("Hello Rohit after 2 seconds!");
+}, 2000); // 2000 ms = 2 seconds
+
+console.log("End");
+
+Output:
+Start
+End
+Hello Rohit after 2 seconds!
+
+
+🧠 Explanation:
+setTimeout() is asynchronous — it doesn’t block other code.
+The rest of the program continues running, and after the given delay, your callback runs.
+
+🔁 2. setInterval()
+
+What it does:
+setInterval() repeatedly runs a function every X milliseconds until you stop it.
+
+Example:
+let count = 0;
+
+const intervalId = setInterval(() => {
+  count++;
+  console.log("Count:", count);
+
+  if (count === 5) {
+    clearInterval(intervalId); // stop after 5 times
+  }
+}, 1000); // run every 1 second
+
+Output:
+Count: 1
+Count: 2
+Count: 3
+Count: 4
+Count: 5
+
+
+🧠 Explanation:
+
+setInterval() runs repeatedly
+
+Use clearInterval(id) to stop it.
+
+💎 3. Promise
+
+What it does:
+A Promise is an object that represents a value that may be available now, later, or never.
+It’s used to handle asynchronous tasks like API calls or reading files.
+
+A Promise has 3 states:
+
+pending
+
+fulfilled (resolved)
+
+rejected
+
+Example:
+let myPromise = new Promise((resolve, reject) => {
+  let success = true; // try changing to false to test rejection
+
+  if (success) {
+    resolve("✅ Task done successfully!");
+  } else {
+    reject("❌ Something went wrong!");
+  }
+});
+
+myPromise
+  .then((message) => {
+    console.log("Then:", message);
+  })
+  .catch((error) => {
+    console.log("Catch:", error);
+  });
+
+Output (if success = true):
+Then: ✅ Task done successfully!
+
+Output (if success = false):
+Catch: ❌ Something went wrong!
+
+
+🧠 Explanation:
+
+resolve() → when the task completes successfully
+
+reject() → when there’s an error
+
+.then() → handles success
+
+.catch() → handles errors
+
+⚙️ 4. async / await
+
+What it does:
+async and await make working with Promises easier and cleaner — like synchronous code but still asynchronous under the hood.
+
+Example:
+function getData() {
+  return new Promise((resolve) => {
+    setTimeout(() => {
+      resolve("📦 Data received after 2 seconds");
+    }, 2000);
+  });
+}
+
+async function showData() {
+  console.log("Fetching data...");
+  const data = await getData(); // waits for Promise to resolve
+  console.log(data);
+  console.log("Done!");
+}
+
+showData();
+
+Output:
+Fetching data...
+📦 Data received after 2 seconds
+Done!
+
+
+🧠 Explanation:
+
+async → makes a function return a Promise
+
+await → waits until the Promise resolves before moving to the next line
+
+This avoids callback hell and makes your code more readable.
