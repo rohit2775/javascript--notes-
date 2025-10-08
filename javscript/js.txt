@@ -708,3 +708,114 @@ for(let key in student) {
 
 // Method call
 student.greet(); // Hi, mai Rohit hu
+
+
+
+
+.. #### import and export 
+
+   What are import and export in JavaScript?
+
+When we build big projects, we split our code into multiple files so that everything stays clean, readable, and easy to manage.
+This is called modular coding.
+
+Now, if you write a function, variable, or class in one file
+and want to use it in another file,
+you’ll use export (to send it out) and import (to bring it in).
+
+🔹 1. Export — sending code out of a file
+(a) Named Export
+
+You can export multiple things from a file, each with its own name.
+
+// file: math.js
+export const PI = 3.14;
+
+export function add(a, b) {
+  return a + b;
+}
+
+export function subtract(a, b) {
+  return a - b;
+}
+
+
+Now, to use them in another file 👇
+
+// file: app.js
+import { PI, add, subtract } from './math.js';
+
+console.log(PI); // 3.14
+console.log(add(5, 3)); // 8
+console.log(subtract(5, 3)); // 2
+
+
+The curly braces {} mean you’re importing named exports by their names.
+
+(b) Default Export
+
+If you want to export only one main thing from a file,
+use export default.
+
+// file: greet.js
+export default function greet(name) {
+  return `Hello, ${name}!`;
+}
+
+
+Now import it 👇
+
+// file: app.js
+import greet from './greet.js';
+
+console.log(greet('Rohit')); // Hello, Rohit!
+
+
+⚡ Here, you don’t need {} because it’s a default export.
+
+🔹 2. Import — bringing code into a file
+
+When you want to use code from another file, you import it.
+
+Example 👇
+
+import { add } from './math.js';
+import greet from './greet.js';
+
+console.log(add(2, 3)); // 5
+console.log(greet('Rohit')); // Hello, Rohit!
+
+🧠 Important Tips to Remember
+Type	Syntax	Example
+Named Export	export const name = ...	export function add() {}
+Default Export	export default ...	export default function() {}
+Named Import	import { name } from '...'	import { add } from './math.js'
+Default Import	import name from '...'	import greet from './greet.js'
+Rename Import	import { add as plus } from '...'	plus(2, 3)
+📦 Real-World Example
+
+Let’s say you have a utils.js file that contains some useful functions 👇
+
+// utils.js
+export function formatName(name) {
+  return name.toUpperCase();
+}
+
+export default function sayHi(name) {
+  console.log(`Hi, ${name}!`);
+}
+
+
+Now you can import and use them in your main file 👇
+
+// main.js
+import sayHi, { formatName } from './utils.js';
+
+const name = formatName('rohit');
+sayHi(name); // Hi, ROHIT!
+
+
+In simple words 👇
+
+🔸 export = send something out of a file
+🔸 import = bring something into a file
