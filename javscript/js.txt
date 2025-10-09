@@ -1137,3 +1137,67 @@ If fetch() fails, control goes to catch block.
 
 You can handle network failures or API issues gracefully.
 
+
+
+one more problem .... 
+
+Example 6: Login → Fetch Posts → Display
+
+👉 Problem:
+Simulate a flow where:
+
+A user logs in (takes 1 second).
+
+After login, fetch that user’s posts (takes 2 seconds).
+
+Then display those posts (takes 1 second).
+
+You need to use async/await and Promises to make it work step-by-step.
+
+✅ Solution:
+function loginUser(username) {
+  return new Promise((resolve) => {
+    setTimeout(() => {
+      console.log("✅ User logged in:", username);
+      resolve({ username });
+    }, 1000);
+  });
+}
+
+function getUserPosts(username) {
+  return new Promise((resolve) => {
+    setTimeout(() => {
+      console.log("📩 Fetching posts for:", username);
+      resolve(["Post 1", "Post 2", "Post 3"]);
+    }, 2000);
+  });
+}
+
+function displayPosts(posts) {
+  return new Promise((resolve) => {
+    setTimeout(() => {
+      console.log("🖥️ Displaying posts:");
+      posts.forEach(post => console.log("•", post));
+      resolve();
+    }, 1000);
+  });
+}
+
+async function main() {
+  const user = await loginUser("RohitBhai");
+  const posts = await getUserPosts(user.username);
+  await displayPosts(posts);
+  console.log("✅ All tasks completed!");
+}
+
+main();
+
+🧠 Explanation:
+
+loginUser() waits 1 sec → returns a user object.
+
+getUserPosts() waits 2 sec → returns an array of posts.
+
+displayPosts() waits 1 sec → prints posts.
+
+await ensures each step runs in order, like real-world API calls.
