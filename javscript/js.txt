@@ -980,7 +980,16 @@ await → waits until the Promise resolves before moving to the next line
 This avoids callback hell and makes your code more readable.
 
 
- some problems related to async await and their solutions with explainations 
+ #### #### some problems related to async await and their solutions with explainations 
+
+
+
+
+
+
+
+
+
 
  Example 1: Wait before printing
 
@@ -1072,6 +1081,11 @@ Sequential: each await waits for the previous one → slower.
 
 Parallel: Promise.all() runs all tasks together → faster 🚀
 
+
+
+
+
+
 🌐 Example 4: Fetch API using async/await
 
 👉 Problem:
@@ -1096,8 +1110,10 @@ response.json() converts it to JS object → again await.
 
 Then we print names using forEach.
 
-💥 Example 5: Error handling with try...catch
 
+
+
+💥 Example 5: Error handling with try...catch
 👉 Problem:
 Fetch data from an invalid URL and handle the error.
 
@@ -1111,6 +1127,7 @@ async function getData() {
     console.log("Something went wrong!", error.message);
   }
 }
+
 
 getData();
 
