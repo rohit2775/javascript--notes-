@@ -790,6 +790,9 @@ import greet from './greet.js';
 console.log(add(2, 3)); // 5
 console.log(greet('Rohit')); // Hello, Rohit!
 
+
+
+
 🧠 Important Tips to Remember
 Type	           Syntax	                          Example
 Named Export	   export const name = ...	             export function add() {}
