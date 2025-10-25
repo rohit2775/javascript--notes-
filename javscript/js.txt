@@ -458,6 +458,8 @@ let student = {
     isActive: true
 };
 
+
+
 2️⃣ Accessing Properties
 
 Dot Notation
@@ -500,6 +502,7 @@ let student = {
 };
 
 student.greet(); // "Hello, my name is Rohit"
+
 
 6️⃣ Built-in Object Methods
 1. Object.keys(obj) → Returns all keys
