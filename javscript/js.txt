@@ -1032,12 +1032,14 @@ After that, "Hello after 2 seconds" is printed.
 👉 Problem:
 Make an async function that returns "Data fetched" after 1 second.
 
+
 ✅ Solution:
 async function fetchData() {
   return new Promise(resolve => {
     setTimeout(() => resolve("Data fetched"), 1000);
   });
 }
+
 
 async function main() {
   const result = await fetchData();
