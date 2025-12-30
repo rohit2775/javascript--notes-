@@ -58,7 +58,7 @@ promiseOne.then(function(){
   }).then((username)=>{
    console.log(username);
   }).catch(function(error){
-   console.log(error);                     /// chainaing of .then for getting the value
+   console.log(error);                        /// chainaing of .then for getting the value
   }).finally(()=>{
    console.log("the promise is either resolved or get rejected");
   })
@@ -73,8 +73,8 @@ const promiseFive = new Promise(function(resolve, reject){
          resolve({username : "ROHITBHAI", pass : "ROJ"})
        }
        else{
-         reject("ERROR : ROHITBHAI went wrong")                  // how to handle rejections 
-       }
+         reject("ERROR : ROHITBHAI went wrong")                     // how to handle rejections 
+       }       
       
        
     }, 1000);   
@@ -82,13 +82,13 @@ const promiseFive = new Promise(function(resolve, reject){
 })
 
 async function consumePromiseFive(params) {
-//     const response = await promiseFive         iss case me error kuch aur  type se ayega isi ko try catch se karne bolwga 
+//     const response = await promiseFive                    iss case me error kuch aur  type se ayega isi ko try catch se karne bolwga 
 //     console.log(response);
         try {
          const response= await promiseFive
          console.log(response);
         } catch (error) {
-         console.log(error);    // ye sahi tarika hai 
+         console.log(error);                     // ye sahi tarika hai 
         }
   
 }
@@ -108,11 +108,10 @@ consumePromiseFive()
 // }
 // ROHIT()
 
-// uper wala code without async await and try catch .. 
 
 fetch('https://api.github.com/users/rohit2775')
 .then((response)=>{
-   return response.json()
+   return response.json()                               // uper wala code without async await and try catch .. 
 
 }).then((data)=>{
    console.log(data);
