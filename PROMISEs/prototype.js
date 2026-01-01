@@ -14,4 +14,6 @@
  const chai = new createUser("chai", 30)
  const tea = new createUser("tea", 250)
 
+ // if we donot use the new keyword here , then it will give an error , you can check it without new keyword 
+ 
  chai.printme()
