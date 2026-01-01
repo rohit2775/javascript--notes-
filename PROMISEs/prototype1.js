@@ -45,3 +45,13 @@ myhouse.Name()
 //     at wrapModuleLoad (node:internal/modules/cjs/loader:245:24)
 //     at Module.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:154:5)
 //     at node:internal/main/run_main_module:33:47
+
+
+// lets create a prototype for true string length calculation fotr string 
+
+ String.prototype.truelength = function (){
+  console.log(`${this}`);
+  console.log(`the true length is : ${this.trim().length}`);
+ }
+
+ "Rohit".truelength()
