@@ -12,3 +12,21 @@
     name : " ROHIT"
   }
 console.log(greet.call(user));
+
+
+// more example 
+
+const student1 = {
+  name: "Aman"
+};
+
+const student2 = {
+  name: "Rohit"
+};
+
+function sayName() {
+  console.log(this.name);
+}
+
+sayName.call(student1); 
+sayName.call(student2); 
