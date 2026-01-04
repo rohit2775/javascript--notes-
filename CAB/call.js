@@ -30,3 +30,18 @@ function sayName() {
 
 sayName.call(student1); 
 sayName.call(student2); 
+
+
+// call with arguments 
+
+function details(age, city) {
+  console.log(`${this.name} is ${age} years old and lives in ${city}`);
+}
+
+const user1 = {
+  name: "Rohit"
+};
+
+details.call(user1, 20, "Delhi");
+
+
