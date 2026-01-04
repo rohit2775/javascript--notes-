@@ -45,3 +45,23 @@ const user1 = {
 details.call(user1, 20, "Delhi");
 
 
+// example related to method browsing 
+
+const userA = {
+  name: "Aman"
+};
+
+const userB = {
+  name: "Rohit"
+};
+
+function sayHello() {
+  console.log(`Hello ${this.name}`);
+}
+
+sayHello.call(userA);
+sayHello.call(userB);
+
+
+// one function multiple objects 
+
