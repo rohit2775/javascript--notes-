@@ -3,64 +3,64 @@
 // this ko custom object se bind karta hai
 // Arguments comma-separated pass hote hain
 
-//  function greet (){
-//     console.log(this.name);
+ function greet (){
+    console.log(this.name);
 
-//  }
+ }
 
-//   const user  = {
-//     name : " ROHIT"
-//   }
-// console.log(greet.call(user));
+  const user  = {
+    name : " ROHIT"
+  }
+console.log(greet.call(user));
 
 
-// // more example 
+// more example 
 
-// const student1 = {
-//   name: "Aman"
-// };
+const student1 = {
+  name: "Aman"
+};
 
-// const student2 = {
-//   name: "Rohit"
-// };
+const student2 = {
+  name: "Rohit"
+};
 
-// function sayName() {
-//   console.log(this.name);
-// }
+function sayName() {
+  console.log(this.name);
+}
 
-// sayName.call(student1); 
-// sayName.call(student2); 
+sayName.call(student1); 
+sayName.call(student2); 
 
 
 // // call with arguments 
 
-// function details(age, city) {
-//   console.log(`${this.name} is ${age} years old and lives in ${city}`);
-// }
+function details(age, city) {
+  console.log(`${this.name} is ${age} years old and lives in ${city}`);
+}
 
-// const user1 = {
-//   name: "Rohit"
-// };
+const user1 = {
+  name: "Rohit"
+};
 
-// details.call(user1, 20, "Delhi");
+details.call(user1, 20, "Delhi");
 
 
-// // example related to method browsing 
+// example related to method browsing 
 
-// const userA = {
-//   name: "Aman"
-// };
+const userA = {
+  name: "Aman"
+};
 
-// const userB = {
-//   name: "Rohit"
-// };
+const userB = {
+  name: "Rohit"
+};
 
-// function sayHello() {
-//   console.log(`Hello ${this.name}`);
-// }
+function sayHello() {
+  console.log(`Hello ${this.name}`);
+}
 
-// sayHello.call(userA);
-// sayHello.call(userB);
+sayHello.call(userA);
+sayHello.call(userB);
 
 
 // one function multiple objects 
