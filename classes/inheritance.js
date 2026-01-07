@@ -19,5 +19,9 @@
     }
  }
 
- const ME = Teacher("rohit","rohit2gmail.com","124")
+ const ME = new Teacher("rohit","rohit2gmail.com","124")
  ME.addCourse()
+
+ const YU = new User("ROHIT BHAI")
+
+ YU.logMe()
