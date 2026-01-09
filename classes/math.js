@@ -51,3 +51,4 @@ console.log(Object.getOwnPropertyDescriptor(Shop , "name"));
 //   enumerable: false,
 //   configurable: true
 // }
+// enumerable false ka matlab ispe iteratable nahi hoga , ispe value  pr loop nahi chalega 
