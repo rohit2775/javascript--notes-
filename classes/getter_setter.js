@@ -29,3 +29,7 @@
 // and a setter is a method that is used to update or modify the value of an object’s property with proper control and validation.
  
  // note : here the underscore is being used ,because the constructor is also assigning the values ans getter - setter also , so we have used  the underscore with the variables so that they can act as  private  members  
+
+
+ // getter and setter can also be used in functions and objects 
+ 
