@@ -1,0 +1,1 @@
+//       lexical scopes - A function can access variables that are defined in the place where the function is written.
