@@ -97,16 +97,16 @@ consumePromiseFive()
 
 
 
-async function ROHIT(){
-   try {
-      const res= await fetch('https://api.github.com/users/rohit2775')
-      const data =  await res.json()
-      console.log(data);
-   } catch (error) {
-       console.log(error);
-   }
-}
-ROHIT()
+// async function ROHIT(){
+//    try {
+//       const res= await fetch('https://api.github.com/users/rohit2775')
+//       const data =  await res.json()
+//       console.log(data);
+//    } catch (error) {
+//        console.log(error);
+//    }
+// }
+// ROHIT()
 
 
 fetch('https://api.github.com/users/rohit2775')

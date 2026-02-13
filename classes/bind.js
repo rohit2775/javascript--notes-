@@ -24,3 +24,11 @@ fixed(); // Rohit
 
 
 //one more example 
+
+ function HELLO(){
+  console.log(this.name);
+ }
+const pple= {name : "rahul"}
+
+const nnee = HELLO.bind(pple)
+nnee()
