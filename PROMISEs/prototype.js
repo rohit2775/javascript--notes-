@@ -17,3 +17,6 @@
  // if we donot use the new keyword here , then it will give an error , you can check it without new keyword 
  
  chai.printme()
+
+
+// means prototype se Naya property define krr sakte hai shayad 
