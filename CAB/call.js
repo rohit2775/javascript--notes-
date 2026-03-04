@@ -78,3 +78,4 @@ function CreateUser (username , email, pass){
 }
 const rohit = new CreateUser("rohit", "rohit@123", "qqwwee")
 console.log(rohit);
+
