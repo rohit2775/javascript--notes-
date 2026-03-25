@@ -22,7 +22,7 @@
 
  const Rohit = new User("rohit@124" , "rohit")
  console.log(Rohit.email)
-
+ // 
 
 
 //     A getter is a method that is used to read or access an object’s property,
