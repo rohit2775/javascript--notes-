@@ -30,10 +30,12 @@ promiseOne.then(function(){
     }, 1000);
  })
 
+
  promiseThree.then(function(user){
     console.log(user);
 
  })             // kis tarah se data consymption hota hai  ,  ksie values aaati hai ........ resolve ke through 
+
 
 
 
