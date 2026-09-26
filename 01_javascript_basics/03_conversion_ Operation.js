@@ -65,7 +65,7 @@ console.table([NewIsLoggedIn, typeof NewIsLoggedIn]);
 
 //********************************************************><<<<====>>>>***************************************************** */
 
-// OPERATIONS 
+                                                         // OPERATIONS //
 
 // negative 
 // console.log(2+2);
