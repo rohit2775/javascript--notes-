@@ -74,3 +74,7 @@ console.table([NewIsLoggedIn, typeof NewIsLoggedIn]);
 // console.log(2/2);
 // console.log(2%2);
 // console.log(2**2);  this means power (2^2) 
+
+console.log("2" +2+ 2);
+console.log(2 +"2"+ 2);
+console.log(2 +2+ "2");
